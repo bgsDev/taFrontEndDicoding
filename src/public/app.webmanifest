@@ -1,0 +1,44 @@
+{
+    "id": "restoran-lite-pwa-1",
+    "start_url": "./index.html",
+    "name": "Restotan Lite",
+    "short_name": "Resto Lite",
+    "description": "Free view Infomation",
+    "display": "standalone",
+    "background_color": "#FFFFFF",
+    "theme_color": "#D84315",
+    "icons": [
+      {
+        "src": "/icon mfc/ic_launcher-63d90dcd83a32/android/mipmap-hdpi/ic_launcher.png",
+        "sizes": "72x72",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icon mfc/ic_launcher-63d90dcd83a32/android/mipmap-xhdpi/ic_launcher.png",
+        "sizes": "96x96",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      
+      {
+        "src": "/icon mfc/ic_launcher-63d90dcd83a32/android/mipmap-xxhdpi/ic_launcher.png",
+        "sizes": "144x144",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      
+      {
+        "src": "/icon mfc/ic_launcher-63d90dcd83a32/android/mipmap-xxxhdpi/ic_launcher.png",
+        "sizes": "192x192",
+        "type": "image/png",
+        "purpose": "any"
+      },
+      {
+        "src": "/icon mfc/ic_launcher-63d90dcd83a32/android/ic_launcher-web.png",
+        "sizes": "512x512",
+        "type": "image/png",
+        "purpose": "any"
+      }
+    ]
+  }

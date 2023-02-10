@@ -1,0 +1,58 @@
+
+@media screen and (min-width: 600px) {
+  .wrapper {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .wrapperDetail {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .detailInformasi{
+    grid-template-columns:65% 35%;
+  }
+  .boxReview{
+    grid-template-columns: 13% 87%;
+  }
+  .boxReviewEnd{
+    grid-template-columns: 87% 13% !important; 
+  }
+}
+@media screen and (min-width: 900px) {
+  .wrapper {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+  .nmResto a{
+    display: grid;
+    align-items: center;
+    text-decoration: none;
+    font-size: 12px;
+    color: black;
+    text-transform: uppercase;
+    /* padding: 10px; */
+  }
+  .boxReview{
+    grid-template-columns: 11% 89%;
+  }
+  .boxReviewEnd{
+    grid-template-columns: 89% 11% !important; 
+  }
+}
+@media screen and (min-width: 1200px) {  
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+  .wrapperDetail {
+    margin: auto;
+  }
+  .boxReview{
+    grid-template-columns: 7% 93%;
+  }
+  .boxReviewEnd{
+    grid-template-columns: 93% 7% !important; 
+  }
+}
+
+@media screen and (min-width: 1400px) {  
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr) !important;
+  }
+}
