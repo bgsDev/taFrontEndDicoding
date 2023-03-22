@@ -10,7 +10,8 @@
     "serve": "http-server dist",
     "test": "karma start",
     "e2e": "codeceptjs run --steps",
-    "build-video": "node build-video.js"
+    "build-video": "node build-video.js",
+    "build-image": "node sharp.js"
   },
   "keywords": [],
   "author": "Bagus H <bagushartiansyah07@gmail.com>",

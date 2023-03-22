@@ -85,9 +85,8 @@ class headerce extends HTMLElement {
         ${this.cssHead1()}
         <div class="item logo">
           <picture>
-            <source class="lazyload"  type="image/webp" srcset="${this.img}.webp">
-            <source class="lazyload"  type="image/jpeg" srcset="${this.img}.jpg">
-            <img class="lazyload"  src="${this.img}.jpg" alt="profil restoran">
+            <source class="lazyload"  type="image/webp" data-srcset="${this.img}-small.jpg">
+            <img class="lazyload"  data-src="${this.img}.jpg" alt="profil restoran">
           </picture>
         </div>
         <div class="item">

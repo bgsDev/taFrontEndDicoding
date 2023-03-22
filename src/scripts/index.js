@@ -12,7 +12,7 @@ import '../templates/customElement/modal/modal-ce';
 import swRegister from './utils/sw-register';
 
 // web socket
-// import WebSocketInitiator from './utils/websocket-initiator';
+import WebSocketInitiator from './utils/websocket-initiator';
 
 // modal suffort
 import sfmodal from './utils/sfLib/modal';
@@ -25,7 +25,7 @@ import App from './views/app';
 // create html
 const headce = document.querySelector('header-ce');
 headce.head1 = {
-  img: 'dev-blankx',
+  img: 'logo/dev-blankx',
   nmApp: 'Restaurant Zam-Zam',
 };
 const navce = document.querySelector('nav-ce');
@@ -55,7 +55,7 @@ window.addEventListener('load', () => {
   sfmodal.loading();
   app.renderPage();
   swRegister();
-  // WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
+  WebSocketInitiator.init(CONFIG.WEB_SOCKET_SERVER);
   sfmodal.close();
 });
 

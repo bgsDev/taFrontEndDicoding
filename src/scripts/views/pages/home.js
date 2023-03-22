@@ -12,9 +12,8 @@ const pageHome = {
       <article id="heros">
         <figure>
           <picture>
-            <source media="(max-width: 600px)" class="herosImg lazyload" type="image/webp" srcset="heros/hero-image_2.webp">
-            <source media="(max-width: 600px)" class="herosImg lazyload" type="image/jpeg" srcset="heros/hero-image_2.jpg">
-            <img class="herosImg lazyload" src="heros/hero-image_2.jpg" alt="chef resto">
+            <source media="(max-width: 600px)" class="herosImg lazyload" type="image/jpeg" srcset="heros/hero-image_2-small.jpg">
+            <img class="herosImg lazyload" src="heros/hero-image_2-large.jpg" alt="chef resto">
           </picture>
         </figure>
         <div class="herosContent content">
@@ -37,13 +36,12 @@ const pageHome = {
     const listResto = document.getElementById('listResto');
     let chtml = '';
     list.restaurants.forEach((v, i) => {
-      // if (i === 0) {
-      // }<img class="imgRadius" src="" alt="profil restoran">
       chtml += `<div class='box'>
                     <figure>
                       <picture>
-                        <source media="(max-width: 600px)" class="imgRadius lazyload" type="image/webp" srcset="${CONFIG.BASE_IMAGE_URLS + v.pictureId}">
-                        <img class="imgRadius lazyload" src="${CONFIG.BASE_IMAGE_URLM + v.pictureId}" alt="profil restoran">
+                        <source media="(max-width: 600px)" class="imgRadius lazyload" type="image/webp" data-srcset="${CONFIG.BASE_IMAGE_URLS + v.pictureId}">
+                        <source media="(max-width: 600px)" class="imgRadius lazyload" type="image/jpeg" data-srcset="${CONFIG.BASE_IMAGE_URLS + v.pictureId}">
+                        <img class="imgRadius lazyload" data-src="${CONFIG.BASE_IMAGE_URLM + v.pictureId}" alt="profil restoran">
                       </picture>
                     </figure>
                     <div class="title">

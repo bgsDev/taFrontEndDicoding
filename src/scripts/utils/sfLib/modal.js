@@ -44,11 +44,42 @@ const sfmodal = {
     this.title.style.display = 'none';
     // this.body.innerHTML = '<img src="ffmpeg/load.mp4" width="100">';
     this.body.innerHTML = `
-      <video autoplay loop muted playsinline width='100'>
-        <source src="ffmpeg/load.webm" type="video/webm">
-        <source src="ffmpeg/load.mp4" type="video/mp4">
-      </video>
+      <style>
+        .lds-circle {
+          display: inline-block;
+          transform: translateZ(1px);
+        }
+        .lds-circle > div {
+          display: inline-block;
+          width: 64px;
+          height: 64px;
+          margin: 8px;
+          border-radius: 50%;
+          background: #fed;
+          animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+        }
+        @keyframes lds-circle {
+          0%, 100% {
+            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+          }
+          0% {
+            transform: rotateY(0deg);
+          }
+          50% {
+            transform: rotateY(1800deg);
+            animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+          }
+          100% {
+            transform: rotateY(3600deg);
+          }
+        }
+      </style>
+      <div class="lds-circle"><div></div></div>
     `;
+    //   <video autoplay loop muted playsinline width='100'>
+    //   <source src="ffmpeg/load.webm" type="video/webm">
+    //   <source src="ffmpeg/load.mp4" type="video/mp4">
+    // </video>
 
     this.body.style.textAlign = 'center';
     this.body.style.borderTop = 'none';

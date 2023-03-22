@@ -43,6 +43,7 @@ const pageDetail = {
         <figure>
           <picture>
             <source media="(max-width: 600px)"  class="herosImg lazyload" type="image/webp" srcset="${CONFIG.BASE_IMAGE_URLS + dt.pictureId}">
+            <source media="(max-width: 600px)"  class="herosImg lazyload" type="image/jpeg" srcset="${CONFIG.BASE_IMAGE_URLS + dt.pictureId}">
             <img  class="herosImg lazyload" src="${CONFIG.BASE_IMAGE_URLM + dt.pictureId}" alt="profil restoran">
           </picture>
         </figure>

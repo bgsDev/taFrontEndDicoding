@@ -12,7 +12,7 @@ const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 module.exports = {
   entry: {
     app: path.resolve(__dirname, 'src/scripts/index.js'),
-    sw: path.resolve(__dirname, 'src/scripts/sw.js'),
+    // sw: path.resolve(__dirname, 'src/scripts/sw.js'),
   },
   output: {
     filename: '[name].bundle.js',
@@ -22,7 +22,7 @@ module.exports = {
   optimization: {
     splitChunks: {
       chunks: 'all',
-      minSize: 20000,
+      minSize: 30000,
       maxSize: 70000,
       minChunks: 1,
       maxAsyncRequests: 30,
@@ -63,6 +63,9 @@ module.exports = {
     ],
   },
   plugins: [
+    new WorkboxWebpackPlugin.GenerateSW({
+      swDest: './sw.bundle.js',
+    }),
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: path.resolve(__dirname, 'src/templates/index.html'),
@@ -75,9 +78,6 @@ module.exports = {
         },
       ],
     }),
-    // new WorkboxWebpackPlugin.GenerateSW({
-    //   swDest: './sw.bundle.js',
-    // }),
     new ImageminWebpackPlugin({
       plugins: [
         ImageminMozjpeg({
@@ -86,17 +86,17 @@ module.exports = {
         }),
       ],
     }),
-    new ImageminWebpWebpackPlugin({
-      config: [
-        {
-          test: /\.(jpe?g|png)/,
-          options: {
-            quality: 50,
-          },
-        },
-      ],
-      overrideExtension: true,
-    }),
+    // new ImageminWebpWebpackPlugin({
+    //   config: [
+    //     {
+    //       test: /\.(jpe?g|png)/,
+    //       options: {
+    //         quality: 30,
+    //       },
+    //     },
+    //   ],
+    //   overrideExtension: true,
+    // }),
     new BundleAnalyzerPlugin(),
   ],
 };

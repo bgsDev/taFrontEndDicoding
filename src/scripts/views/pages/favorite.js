@@ -20,8 +20,8 @@ const pageFavorite = {
       chtml += `<div class='box'>
                     <figure>
                       <picture>
-                        <source media="(max-width: 600px)" class="imgRadius lazyload"  type="image/webp" srcset="${CONFIG.BASE_IMAGE_URLS + v.pictureId}">
-                        <img class="imgRadius lazyload"  src="${CONFIG.BASE_IMAGE_URLM + v.pictureId}" alt="profil restoran">
+                        <source media="(max-width: 600px)" class="imgRadius lazyload"  type="image/webp" data-srcset="${CONFIG.BASE_IMAGE_URLS + v.pictureId}">
+                        <img class="imgRadius lazyload"  data-src="${CONFIG.BASE_IMAGE_URLM + v.pictureId}" alt="profil restoran">
                       </picture>
                     </figure>
                     <div class="title">
